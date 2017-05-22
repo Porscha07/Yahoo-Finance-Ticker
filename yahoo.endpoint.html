@@ -1,0 +1,20 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var url = 'http://query.yahooapis.com/v1/public/yql?q=env%20%27store://datatables.org/alltableswithkeys%27;select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22goog%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json';
+
+$.getJSON()
+// getJSON requires 2 arguements
+// 1. the URL-Where
+// 2.function to run when javascript is back
+// 3. the word data can be anything ( its the parameter) of an anonomous function.
+console.log("issuing AJAX reques.....");
+$.getJSON(url,function(data){
+	console.log(data);
+
+})
+// line 14 cant run until line 13 runs first. 
+console.log("AJAX request issues. Waiting patiently for the guy in front of me to get done")
+
+</script>
